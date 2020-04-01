@@ -1,4 +1,5 @@
 **/target/
+**/**/target/
 *.project
 *.classpath
 *.project
@@ -9,3 +10,13 @@
 *.factorypath
 *.iml
 **/.idea
+/graduation-gateway/target/
+/graduation-server-config/target/
+/graduation-server-eureka/target/
+/graduation-system/graduation-system-service/target/
+/graduation-system/graduation-system-feign/target/
+/graduation-user/graduation-user-service/target/
+/graduation-user/graduation-user-feign/target/
+/graduation-util/target/
+/graduation-course/graduation-course-feign/target/
+/graduation-course/graduation-course-service/target/
