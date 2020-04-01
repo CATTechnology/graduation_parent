@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="graduation-server-eureka" />
+        <module name="graduation-util" />
+        <module name="graduation-user-feign" />
+        <module name="graduation-course-feign" />
+        <module name="graduation-server-config" />
+        <module name="graduation-system-service" />
+        <module name="graduation-gateway" />
+        <module name="graduation-system-feign" />
+        <module name="graduation-user-service" />
+        <module name="graduation-course-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="graduation" target="1.8" />
+      <module name="graduation-course" target="1.8" />
+      <module name="graduation-course-feign" target="1.8" />
+      <module name="graduation-course-service" target="1.8" />
+      <module name="graduation-gateway" target="1.8" />
+      <module name="graduation-job" target="1.8" />
+      <module name="graduation-server-admin" target="1.8" />
+      <module name="graduation-server-config" target="1.8" />
+      <module name="graduation-server-eureka" target="1.8" />
+      <module name="graduation-system" target="1.8" />
+      <module name="graduation-system-feign" target="1.8" />
+      <module name="graduation-system-service" target="1.8" />
+      <module name="graduation-user" target="1.8" />
+      <module name="graduation-user-feign" target="1.8" />
+      <module name="graduation-user-service" target="1.8" />
+      <module name="graduation-util" target="1.8" />
+      <module name="roncoo-education-job" target="1.5" />
+      <module name="roncoo-education-server-admin" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="graduation-course-feign" options="-parameters" />
+      <module name="graduation-course-service" options="-parameters" />
+      <module name="graduation-gateway" options="-parameters" />
+      <module name="graduation-job" options="-parameters" />
+      <module name="graduation-server-admin" options="-parameters" />
+      <module name="graduation-server-config" options="-parameters" />
+      <module name="graduation-server-eureka" options="-parameters" />
+      <module name="graduation-system-feign" options="-parameters" />
+      <module name="graduation-system-service" options="-parameters" />
+      <module name="graduation-user-feign" options="-parameters" />
+      <module name="graduation-user-service" options="-parameters" />
+      <module name="graduation-util" options="-parameters" />
+    </option>
+  </component>
+</project>

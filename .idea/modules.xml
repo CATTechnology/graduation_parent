@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/graduation.iml" filepath="$PROJECT_DIR$/graduation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-course/graduation-course.iml" filepath="$PROJECT_DIR$/graduation-course/graduation-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-course/graduation-course-feign/graduation-course-feign.iml" filepath="$PROJECT_DIR$/graduation-course/graduation-course-feign/graduation-course-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-course/graduation-course-service/graduation-course-service.iml" filepath="$PROJECT_DIR$/graduation-course/graduation-course-service/graduation-course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-gateway/graduation-gateway.iml" filepath="$PROJECT_DIR$/graduation-gateway/graduation-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-server-config/graduation-server-config.iml" filepath="$PROJECT_DIR$/graduation-server-config/graduation-server-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-server-eureka/graduation-server-eureka.iml" filepath="$PROJECT_DIR$/graduation-server-eureka/graduation-server-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-system/graduation-system.iml" filepath="$PROJECT_DIR$/graduation-system/graduation-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-system/graduation-system-feign/graduation-system-feign.iml" filepath="$PROJECT_DIR$/graduation-system/graduation-system-feign/graduation-system-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-system/graduation-system-service/graduation-system-service.iml" filepath="$PROJECT_DIR$/graduation-system/graduation-system-service/graduation-system-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-user/graduation-user.iml" filepath="$PROJECT_DIR$/graduation-user/graduation-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-user/graduation-user-feign/graduation-user-feign.iml" filepath="$PROJECT_DIR$/graduation-user/graduation-user-feign/graduation-user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-user/graduation-user-service/graduation-user-service.iml" filepath="$PROJECT_DIR$/graduation-user/graduation-user-service/graduation-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graduation-util/graduation-util.iml" filepath="$PROJECT_DIR$/graduation-util/graduation-util.iml" />
+    </modules>
+  </component>
+</project>

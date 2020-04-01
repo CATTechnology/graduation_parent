@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/graduation-course/graduation-course-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-course/graduation-course-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-course/graduation-course-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-course/graduation-course-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-server-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-server-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-server-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-server-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-system/graduation-system-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-user/graduation-user-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graduation-util/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

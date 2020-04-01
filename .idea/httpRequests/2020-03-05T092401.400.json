@@ -1,0 +1,1 @@
+{"timestamp":"2020-03-05T21:24:01.744+0800","status":400,"error":"Bad Request","message":"Required request body is missing: public com.roncoo.education.util.base.Result<com.roncoo.education.user.common.dto.UserLoginDTO> com.roncoo.education.user.service.api.ApiUserInfoController.register(com.roncoo.education.user.common.bo.UserRegisterBO)","path":"/user/api/user/register"}
