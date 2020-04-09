@@ -9,11 +9,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-/**
- * 讲师信息
- *
- * @author wujing
- */
 @Data
 @Accessors(chain = true)
 public class LecturerViewDTO implements Serializable {

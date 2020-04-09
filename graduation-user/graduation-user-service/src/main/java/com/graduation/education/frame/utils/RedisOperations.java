@@ -3,9 +3,8 @@ package com.graduation.education.frame.utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
+import redis.clients.jedis.JedisCluster;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class RedisOperations {
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private JedisCluster jedisCluster;
 
     /**
      * get key
@@ -29,8 +28,7 @@ public class RedisOperations {
      */
     public String get(String key) {
         try {
-            ValueOperations<String, String> stringOps = redisTemplate.opsForValue();
-            return stringOps.get(key);
+            return jedisCluster.get(key);
         } catch (Exception e) {
             log.warn("redis服务出现异常", e);
             return null;
@@ -48,8 +46,7 @@ public class RedisOperations {
      */
     public void set(String key, String value, long time, TimeUnit timeUnit) {
         try {
-            ValueOperations<String, String> stringOps = redisTemplate.opsForValue();
-            stringOps.set(key, value, time, timeUnit);
+            jedisCluster.setex(key, (int) timeUnit.toSeconds(time), value);
         } catch (Exception e) {
             log.warn("redis服务出现异常", e);
         }
@@ -64,8 +61,7 @@ public class RedisOperations {
      */
     public String hget(String key, String field) {
         try {
-            HashOperations<String, String, String> hashOperations = redisTemplate.opsForHash();
-            return hashOperations.get(key, field);
+            return jedisCluster.hget(key, field);
         } catch (Exception e) {
             log.warn("redis服务出现异常", e);
             return null;
@@ -73,14 +69,24 @@ public class RedisOperations {
     }
 
 
-    public String hset(String key, String field, String value) {
+    public void hset(String key, String field, String value) {
         try {
-            HashOperations<String, String, String> hashOperations = redisTemplate.opsForHash();
-            hashOperations.put(key, field, value);
-            return hashOperations.get(key, field);
+            jedisCluster.hset(key, field, value);
         } catch (Exception e) {
             log.warn("redis服务出现异常", e);
-            return null;
+        }
+    }
+
+    public void hsetEx(String key,String field , String value , long time, TimeUnit timeUnit){
+        try {
+            jedisCluster.hset(key, field, value);
+            Long ttl = jedisCluster.ttl(key);
+            if(ttl == 0){
+                //第一次设置过期时间
+                jedisCluster.expire(key , (int) timeUnit.toSeconds(time));
+            }
+        } catch (Exception e) {
+            log.warn("redis服务出现异常", e);
         }
     }
 }

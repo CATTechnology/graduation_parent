@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author YZJ
  */
-@FeignClient(value = "roncoo-education-system-service")
+@FeignClient(value = "graduation-system-service")
 public interface IFeignSys {
 
 

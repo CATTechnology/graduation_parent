@@ -1,3 +1,15 @@
+GET http://localhost:5721/user/api/content
+
+<> 2020-04-09T014935.200.json
+
+###
+
+GET http://localhost:5720/system/api/advices
+
+<> 2020-04-01T091551.404.json
+
+###
+
 POST http://localhost:5720/user/api/user/send/code
 
 <> 2020-03-05T095442.400.json

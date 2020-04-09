@@ -7,11 +7,6 @@ import java.util.List;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-/**
- * 行政区域表
- *
- * @author wujing
- */
 @Data
 @Accessors(chain = true)
 public class RegionListDTO implements Serializable {

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class User implements Serializable {
-    private Long id;
+    protected Long id;
 
     private Date gmtCreate;
 
@@ -14,7 +14,7 @@ public class User implements Serializable {
 
     private Long userNo;
 
-    private String mobile;
+    protected String mobile;
 
     private String mobileSalt;
 

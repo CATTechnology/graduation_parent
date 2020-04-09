@@ -10,11 +10,6 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-/**
- * 讲师信息
- *
- * @author wujing
- */
 @Data
 @Accessors(chain = true)
 public class LecturerDTO implements Serializable {

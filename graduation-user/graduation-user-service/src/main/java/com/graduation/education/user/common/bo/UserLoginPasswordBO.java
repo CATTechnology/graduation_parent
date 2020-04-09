@@ -38,6 +38,12 @@ public class UserLoginPasswordBO implements Serializable {
 	@ApiModelProperty(value = "clientId", required = true)
 	private String clientId;
 
+	/**
+	 * 标识学生或者老师
+	 */
+	@ApiModelProperty(value = "clientId", required = true)
+	private Boolean isStudent;
+
 	private String ip;
 
 }

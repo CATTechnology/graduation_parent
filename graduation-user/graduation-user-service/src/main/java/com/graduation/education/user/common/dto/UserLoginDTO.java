@@ -1,6 +1,3 @@
-/**
- * Copyright 2015-现在 广州市领课网络科技有限公司
- */
 package com.graduation.education.user.common.dto;
 
 import java.io.Serializable;
@@ -23,15 +20,15 @@ public class UserLoginDTO implements Serializable {
 	 */
 	@ApiModelProperty(value = "用户编号")
 	@JsonSerialize(using = ToStringSerializer.class)
-	private Long userNo;
+	protected Long userNo;
 	/**
 	 * 手机号码
 	 */
 	@ApiModelProperty(value = "手机号")
-	private String mobile;
+	protected String mobile;
 	/**
 	 * token，设置有效期为1天
 	 */
 	@ApiModelProperty(value = "token，有效期为1天")
-	private String token;
+	protected String token;
 }

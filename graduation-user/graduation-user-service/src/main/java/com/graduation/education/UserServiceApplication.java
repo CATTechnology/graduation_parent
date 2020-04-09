@@ -4,6 +4,7 @@
 package com.graduation.education;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -17,6 +18,7 @@ import com.spring4all.swagger.EnableSwagger2Doc;
 @EnableFeignClients
 @ServletComponentScan
 @SpringCloudApplication
+@EnableConfigurationProperties
 public class UserServiceApplication {
 
 	public static void main(String[] args) {
