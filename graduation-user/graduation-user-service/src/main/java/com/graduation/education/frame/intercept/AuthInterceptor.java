@@ -7,9 +7,11 @@ import com.graduation.education.util.tools.IPUtil;
 import lombok.SneakyThrows;
 import org.apache.commons.lang.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -54,20 +56,11 @@ public class AuthInterceptor {
         String authorization = request.getHeader("Authorization");
         //获取目标对象的类
         Class<?> targetClass = jp.getTarget().getClass();
-        //方法名
-        String methodName = jp.getSignature().getName();
-        //方法入参
-        Object[] args = jp.getArgs();
-        Class<?>[] argsClass = null;
-        if (args != null) {
-            argsClass = new Class[args.length];
-            for (int i = 0; i < args.length; i++) {
-                argsClass[i] = args[i].getClass();
-            }
-        }
-        //请求的方法
-        Method requestMethod = targetClass.getDeclaredMethod(methodName, argsClass);
+        Signature signature = jp.getSignature();
+        MethodSignature methodSignature = (MethodSignature)signature;
+        Method requestMethod = methodSignature.getMethod();
         Auth auth = requestMethod.getAnnotation(Auth.class);
+
         if (auth != null && auth.required()) {
             if (StringUtils.isBlank(authorization)) {
                 //不执行后序代码

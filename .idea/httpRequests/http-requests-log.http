@@ -1,3 +1,7 @@
+GET http://localhost:5721/user/api/tasks/{id}/content
+
+###
+
 GET http://localhost:5721/user/api/content
 
 <> 2020-04-09T014935.200.json

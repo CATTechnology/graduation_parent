@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.graduation.education.user.service.dao.impl.mapper.TaskItemMapper">
+
   <resultMap id="BaseResultMap" type="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItem">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="task_id" jdbcType="BIGINT" property="taskId" />
@@ -10,9 +11,16 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
   </resultMap>
+
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItem">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="content_md" jdbcType="LONGVARCHAR" property="contentMd" />
   </resultMap>
+
+  <resultMap id="ResultMapBLOBS" type="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItem">
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -75,7 +83,7 @@
     id, task_id, title, image, introduce, create_time, modify_time
   </sql>
   <sql id="Blob_Column_List">
-    content
+    content,content_md
   </sql>
   <select id="selectByExampleWithBLOBs" parameterType="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItemExample" resultMap="ResultMapWithBLOBs">
     select
@@ -124,7 +132,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
-    select 
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -144,10 +152,10 @@
   <insert id="insert" parameterType="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItem">
     insert into task_item (id, task_id, title, 
       image, introduce, create_time, 
-      modify_time, content)
+      modify_time, content,content_md)
     values (#{id,jdbcType=BIGINT}, #{taskId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
       #{image,jdbcType=VARCHAR}, #{introduce,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{modifyTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
+      #{modifyTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR}, #{contentMd,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.graduation.education.user.service.dao.impl.mapper.entity.TaskItem">
     insert into task_item
@@ -176,6 +184,9 @@
       <if test="content != null">
         content,
       </if>
+      <if test="contentMd != null">
+        content_md,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -201,6 +212,9 @@
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="contentMd != null">
+        #{contentMd,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -317,4 +331,8 @@
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectById" resultType="string" parameterType="long">
+    select content from task_item where id = #{id , jdbcType=BIGINT}
+  </select>
 </mapper>

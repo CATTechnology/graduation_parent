@@ -18,21 +18,11 @@ import org.springframework.web.multipart.MultipartFile;
  * 上传接口
  */
 @RestController
-@RequestMapping(value = "/course/api/upload")
+@RequestMapping(value = "/user/api/upload")
 public class ApiUploadController extends BaseController {
 
     @Autowired
     private ApiUploadBiz biz;
-
-    /**
-     * 上传视频接口
-     * @param videoFile
-     */
-    @ApiOperation(value = "上传视频接口", notes = "上传视频")
-    @RequestMapping(value = "/video", method = RequestMethod.POST)
-    public Result<String> uploadVideo(@RequestParam(value = "videoFile", required = false) MultipartFile videoFile) {
-        return biz.uploadVideo(videoFile);
-    }
 
     /**
      * 上传图片接口
@@ -42,7 +32,7 @@ public class ApiUploadController extends BaseController {
     @RequestMapping(value = "/pic", method = RequestMethod.POST)
     public Result<String> uploadPic(@RequestParam(value = "picFile", required = false) MultipartFile picFile) {
         return biz.uploadPic(picFile);
-    }
+}
 
     /**
      * 上传文档接口

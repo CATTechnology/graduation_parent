@@ -3,15 +3,8 @@
  */
 package com.graduation.education.user.service.api.biz;
 
-import com.graduation.education.system.feign.interfaces.IFeignSys;
-import com.graduation.education.system.feign.vo.SysVO;
-import com.graduation.education.user.service.dao.CourseChapterPeriodAuditDao;
-import com.graduation.education.user.service.dao.CourseChapterPeriodDao;
-import com.graduation.education.user.service.dao.CourseVideoDao;
-import com.graduation.education.user.service.dao.FileStorageDao;
-import com.graduation.education.user.service.dao.impl.mapper.entity.CourseChapterPeriod;
-import com.graduation.education.user.service.dao.impl.mapper.entity.CourseChapterPeriodAudit;
-import com.graduation.education.user.service.dao.impl.mapper.entity.CourseVideo;
+import com.graduation.education.user.feign.vo.SysVO;
+import com.graduation.education.user.service.dao.*;
 import com.graduation.education.user.service.dao.impl.mapper.entity.FileStorage;
 import com.graduation.education.util.aliyun.Aliyun;
 import com.graduation.education.util.aliyun.AliyunUtil;
@@ -46,141 +39,9 @@ import java.util.List;
 public class ApiUploadBiz extends BaseBiz {
 
     @Autowired
-    private IFeignSys bossSys;
-    @Autowired
-    private CourseChapterPeriodAuditDao courseChapterPeriodAuditDao;
-    @Autowired
-    private CourseChapterPeriodDao courseChapterPeriodDao;
+    private SysDao sysDao;
 
-    @Autowired
-    private CourseVideoDao courseVideoDao;
-    @Autowired
     private FileStorageDao fileStorageDao;
-
-    /**
-     * 上传视频接口
-     *
-     * @author wuyun
-     */
-    public Result<String> uploadVideo(MultipartFile videoFile) {
-        // 视频上传
-        if (videoFile == null || videoFile.isEmpty()) {
-            return Result.error("请选择视频进行上传");
-        }
-
-        // 获取上传文件的原名
-        String fileName = videoFile.getOriginalFilename();
-        boolean fileStatus = true;
-        List<String> fileTypes = Arrays.asList("avi", "mp4", "flv", "mpg", "mov", "asf", "3gp", "f4v", "wmv",
-                "x-ms-wmv\n");
-        for (String filetype : fileTypes) {
-            // 上传文件的原名+小写+后缀
-            if (fileName.toLowerCase().endsWith(filetype)) {
-                fileStatus = false;
-                break;
-            }
-        }
-        if (fileStatus) {
-            return Result.error("上传的视频类型不正确");
-        }
-
-        Long videoNo = IdWorker.getId(); // 当作存储到本地的文件名，方便定时任务的处理
-
-        // 1、上传到本地
-        File targetFile = new File(
-                SystemUtil.PERIOD_VIDEO_PATH + videoNo.toString() + "." + StrUtil.getSuffix(fileName));
-        targetFile.setLastModified(System.currentTimeMillis());// 设置最后修改时间
-        // 判断文件目录是否存在，不存在就创建文件目录
-        if (!targetFile.getParentFile().exists()) {
-            targetFile.getParentFile().mkdirs();
-        }
-        try {
-            videoFile.transferTo(targetFile);
-        } catch (Exception e) {
-            logger.error("上传到本地失败", e);
-            return Result.error("上传文件出错，请重新上传");
-        }
-
-        // 新增课程视频表信息
-        CourseVideo courseVideo = new CourseVideo();
-        courseVideo.setVideoNo(videoNo);
-        courseVideo.setGmtCreate(null);
-        courseVideo.setGmtModified(null);
-        courseVideo.setVideoName(fileName);
-        courseVideo.setVideoStatus(VideoStatusEnum.WAIT.getCode());
-        int result = courseVideoDao.save(courseVideo);
-
-        if (result > 0) {
-            callbackExecutor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    // 2、异步上传到保利威视
-                    UploadFile uploadFile = new UploadFile();
-                    uploadFile.setTitle(fileName);
-                    uploadFile.setDesc(fileName);
-                    uploadFile.setTag(videoFile.getOriginalFilename());
-                    uploadFile.setCataid(1L);
-
-                    // 获取系统配置信息
-                    SysVO sys = bossSys.getSys();
-
-                    UploadFileResult result = PolyvUtil.uploadFile(targetFile, uploadFile, sys.getPolyvWritetoken());
-                    if (result == null) {
-                        // 上传异常，不再进行处理，定时任务会继续进行处理
-                        return;
-                    }
-
-                    courseVideo.setVideoLength(result.getDuration());
-                    courseVideo.setVideoVid(result.getVid());
-                    courseVideo.setVideoStatus(VideoStatusEnum.SUCCES.getCode());
-                    courseVideoDao.updateById(courseVideo);
-
-                    // 3、异步上传到阿里云
-                    String videoOasId = AliyunUtil.uploadDoc(PlatformEnum.COURSE, targetFile,
-                            BeanUtil.copyProperties(sys, Aliyun.class));
-                    courseVideo.setVideoOasId(videoOasId);
-                    courseVideoDao.updateById(courseVideo);
-
-                    // 根据视频编号、课时ID查询课程视频信息
-                    CourseVideo courseVideo = courseVideoDao.getByVideoNoAndPeriodId(videoNo, Long.valueOf(0));
-
-                    // 根据视频编号更新视频信息
-                    List<CourseVideo> list = courseVideoDao.listByVideoNo(videoNo);
-                    for (CourseVideo video : list) {
-                        video.setVideoLength(courseVideo.getVideoLength());
-                        video.setVideoVid(courseVideo.getVideoVid());
-                        video.setVideoStatus(VideoStatusEnum.SUCCES.getCode());
-                        video.setVideoOasId(courseVideo.getVideoOasId());
-                        courseVideoDao.updateById(video);
-                    }
-
-                    // 更新课时审核表视频信息
-                    List<CourseChapterPeriodAudit> periodAuditList = courseChapterPeriodAuditDao.listByVideoNo(videoNo);
-                    for (CourseChapterPeriodAudit periodAudit : periodAuditList) {
-                        periodAudit.setVideoName(courseVideo.getVideoName());
-                        periodAudit.setVideoLength(courseVideo.getVideoLength());
-                        periodAudit.setVideoVid(courseVideo.getVideoVid());
-                        courseChapterPeriodAuditDao.updateById(periodAudit);
-                    }
-                    // 更新课时视频信息
-                    List<CourseChapterPeriod> periodList = courseChapterPeriodDao.listByVideoNo(videoNo);
-                    for (CourseChapterPeriod period : periodList) {
-                        period.setVideoName(courseVideo.getVideoName());
-                        period.setVideoLength(courseVideo.getVideoLength());
-                        period.setVideoVid(courseVideo.getVideoVid());
-                        courseChapterPeriodDao.updateById(period);
-                    }
-                    // 4、成功删除本地文件
-                    if (targetFile.isFile() && targetFile.exists()) {
-                        targetFile.delete();
-                    }
-                }
-            });
-        } else {
-            return Result.error("系统异常，请重试");
-        }
-        return Result.success(String.valueOf(courseVideo.getVideoNo()));
-    }
 
     /**
      * 上传图片接口
@@ -190,7 +51,7 @@ public class ApiUploadBiz extends BaseBiz {
     public Result<String> uploadPic(MultipartFile picFile) {
         if (ObjectUtil.isNotNull(picFile)) {
             // 获取系统配置信息
-            SysVO sys = bossSys.getSys();
+            SysVO sys = sysDao.getSys();
             if (ObjectUtil.isNull(sys)) {
                 Result.error("请在graduation_system库里面的sys表配置相关信息");
             }
@@ -218,8 +79,9 @@ public class ApiUploadBiz extends BaseBiz {
                     return Result.error("上传文件出错，请重新上传");
                 }
             }
-            return Result.success(AliyunUtil.uploadPic(PlatformEnum.COURSE, picFile,
-                    BeanUtil.copyProperties(bossSys.getSys(), Aliyun.class)));
+            String picUrl = AliyunUtil.uploadPic(PlatformEnum.USER, picFile,
+                    BeanUtil.copyProperties(sysDao.getSys(), Aliyun.class));
+            return Result.success(picUrl);
         }
         return Result.error("请选择上传的图片");
     }
@@ -232,7 +94,7 @@ public class ApiUploadBiz extends BaseBiz {
     public Result<String> uploadDoc(MultipartFile docFile) {
         if (ObjectUtil.isNotNull(docFile)) {
             // 获取系统配置信息
-            SysVO sys = bossSys.getSys();
+            SysVO sys = sysDao.getSys();
             if (ObjectUtil.isNull(sys)) {
                 Result.error("未配置系统配置表");
             }
@@ -261,7 +123,7 @@ public class ApiUploadBiz extends BaseBiz {
                 }
             }
             return Result.success(AliyunUtil.uploadDoc(PlatformEnum.COURSE, docFile,
-                    BeanUtil.copyProperties(bossSys.getSys(), Aliyun.class)));
+                    BeanUtil.copyProperties(sysDao.getSys(), Aliyun.class)));
         }
         return Result.error("请选择上传的文件");
 

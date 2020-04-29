@@ -5,7 +5,9 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.model.ObjectMetadata;
 import com.aliyun.oss.model.PutObjectRequest;
 import com.aliyun.oss.model.PutObjectResult;
+import com.graduation.education.util.enums.PlatformEnum;
 import com.graduation.education.util.tools.JSONUtil;
+import com.graduation.education.util.tools.StrUtil;
 import org.junit.Test;
 
 import java.io.File;
@@ -43,5 +45,12 @@ public class OssTest {
         System.out.println("结果是:" + JSONUtil.toJSONString(putObjectResult));
         // 关闭OSSClient。
         ossClient.shutdown();
+    }
+
+    @Test
+    public void filePathTest(){
+        String name = "bk.jpg";
+        String filePath = PlatformEnum.COURSE.name().toLowerCase() + "/" + StrUtil.get32UUID() + name.substring(name.lastIndexOf("."));
+        System.out.println(filePath);
     }
 }

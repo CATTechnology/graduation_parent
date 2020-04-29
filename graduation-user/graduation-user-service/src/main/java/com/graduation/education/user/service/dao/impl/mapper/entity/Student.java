@@ -2,13 +2,17 @@ package com.graduation.education.user.service.dao.impl.mapper.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author 
  * 学生信息表
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class Student extends User implements Serializable {
     /**
      * 主键
@@ -68,6 +72,7 @@ public class Student extends User implements Serializable {
     /**
      * 出生日期
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateOfBirth;
 
     /**
@@ -98,11 +103,13 @@ public class Student extends User implements Serializable {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date modifyTime;
 
     private static final long serialVersionUID = 1L;

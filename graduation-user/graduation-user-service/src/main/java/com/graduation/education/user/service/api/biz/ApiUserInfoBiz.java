@@ -1,14 +1,12 @@
 package com.graduation.education.user.service.api.biz;
 
 import com.aliyuncs.exceptions.ClientException;
+import com.google.common.collect.Maps;
 import com.graduation.education.frame.utils.RedisOperations;
-import com.graduation.education.system.feign.interfaces.IFeignSys;
 import com.graduation.education.user.common.RedisKey;
-import com.graduation.education.user.common.bo.UserLoginCodeBO;
-import com.graduation.education.user.common.bo.UserLoginPasswordBO;
-import com.graduation.education.user.common.bo.UserRegisterBO;
-import com.graduation.education.user.common.bo.UserSendCodeBO;
+import com.graduation.education.user.common.bo.*;
 import com.graduation.education.user.common.bo.auth.UserUpdateBO;
+import com.graduation.education.user.common.constants.UserStatusConstants;
 import com.graduation.education.user.common.dto.StudentLoginDto;
 import com.graduation.education.user.common.dto.TeacherLoginDto;
 import com.graduation.education.user.common.dto.UserLoginDTO;
@@ -31,6 +29,7 @@ import com.xiaoleilu.hutool.util.RandomUtil;
 import jodd.util.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,6 +37,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
@@ -49,9 +49,6 @@ import java.util.regex.Pattern;
 @Slf4j
 @Component
 public class ApiUserInfoBiz extends BaseBiz {
-
-    @Autowired
-    private IFeignSys bossSys;
 
     @Autowired
     private StudentMapper studentMapper;
@@ -82,6 +79,12 @@ public class ApiUserInfoBiz extends BaseBiz {
     @Autowired
     private RedisOperations redisOperations;
 
+    /**
+     * 博客系统注册url
+     */
+    @Value("${blog.register.url}")
+    public String blogRegisterUrl;
+
     @Transactional
     public Result<UserLoginDTO> register(UserRegisterBO userRegisterBO) {
         if (StringUtils.isEmpty(userRegisterBO.getMobile())) {
@@ -108,27 +111,51 @@ public class ApiUserInfoBiz extends BaseBiz {
         }
 
         // 验证码校验
-        String redisSmsCode = redisTemplate.opsForValue().get(platform.getClientId() + userRegisterBO.getMobile());
+        /*String redisSmsCode = redisTemplate.opsForValue().get(platform.getClientId() + userRegisterBO.getMobile());
         if (StringUtils.isEmpty(redisSmsCode)) {
             return Result.error("请输入验证码");
         }
         if (!redisSmsCode.equals(userRegisterBO.getCode())) {
             return Result.error("验证码不正确，请重新输入");
-        }
+        }*/
 
-        // 手机号重复校验
+        // 手机号重复校验(用戶重复注册校验)
         User user = userDao.getByMobile(userRegisterBO.getMobile());
         if (null != user) {
             return Result.error("该手机号已经注册，请更换手机号");
         }
 
-        // 用户注册
-        user = register(userRegisterBO.getMobile(), userRegisterBO.getPassword(), platform.getClientId());
+        String username = "";
+        if (userRegisterBO.getType() == UserStatusConstants.STUDENT) {
+            //学生
+            StudentRegisterBO studentRegisterBO = (StudentRegisterBO) userRegisterBO;
+            user = studentRegister(studentRegisterBO);
+            username = studentRegisterBO.getStudentNo();
+        } else if (userRegisterBO.getType() == UserStatusConstants.TEACHER) {
+            //老师
+            user = teacherRegister((TeacherRegisterBO) userRegisterBO);
+        } else {
+            //普通用户
+            user = register(userRegisterBO.getMobile(), userRegisterBO.getPassword(), platform.getClientId());
+        }
+
+        //异步注册到博客系统
+
+        String finalUsername = username;
+        User finalUser = user;
+        threadPoolService.asyncExec(() -> {
+            Map<String, Object> map = Maps.newHashMap();
+            String nickName = StringUtil.isBlank(finalUsername) ? finalUser.getMobile() : finalUsername;
+            map.put("loginUserName", nickName);
+            map.put("nickName", nickName);
+            map.put("loginPassword", userRegisterBO.getPassword());
+            String post = HttpUtil.postJSON(blogRegisterUrl, map);
+            log.info("注册结果：[{}]", post);
+        });
 
         UserLoginDTO dto = new UserLoginDTO();
         dto.setUserNo(user.getUserNo());
         dto.setMobile(user.getMobile());
-        dto.setToken(JWTUtil.create(user.getUserNo(), JWTUtil.DATE));
         return Result.success(dto);
     }
 
@@ -321,11 +348,8 @@ public class ApiUserInfoBiz extends BaseBiz {
             return Result.error("手机号码格式不正确");
         }
 
-        Platform platform = platformDao.getByClientId(userSendCodeBO.getClientId());
-        if (ObjectUtil.isNull(platform)) {
-            return Result.error("该平台不存在");
-        }
-        if (!StatusIdEnum.YES.getCode().equals(platform.getStatusId())) {
+        Integer platformByClientId = getPlatformByClientId(userSendCodeBO.getClientId());
+        if (!StatusIdEnum.YES.getCode().equals(platformByClientId)) {
             return Result.error("该平台状态异常，请联系管理员");
         }
 
@@ -345,7 +369,7 @@ public class ApiUserInfoBiz extends BaseBiz {
             boolean result = AliyunUtil.sendMsg(userSendCodeBO.getMobile(), sendSmsLog.getSmsCode(), BeanUtil.copyProperties(sys, Aliyun.class));
             // 发送成功，验证码存入缓存：5分钟有效
             if (result) {
-                redisTemplate.opsForValue().set(userSendCodeBO.getClientId() + userSendCodeBO.getMobile(), sendSmsLog.getSmsCode(), 5, TimeUnit.MINUTES);
+                redisOperations.set(userSendCodeBO.getClientId() + userSendCodeBO.getMobile(), sendSmsLog.getSmsCode(), 5, TimeUnit.MINUTES);
                 sendSmsLog.setIsSuccess(IsSuccessEnum.SUCCESS.getCode());
                 sendSmsLogDao.save(sendSmsLog);
                 return Result.success(JSONUtil.toJSONString(sendSmsLog));
@@ -362,14 +386,37 @@ public class ApiUserInfoBiz extends BaseBiz {
         }
     }
 
+    private Student studentRegister(StudentRegisterBO studentRegisterBO) {
+        Student student = BeanUtil.copyProperties(studentRegisterBO, Student.class);
+        Date date = new Date();
+        student.setPasswd(studentRegisterBO.getPassword());
+        student.setCreateTime(date);
+        student.setModifyTime(date);
+        studentMapper.insertSelective(student);
+        return student;
+    }
+
+    private Teacher teacherRegister(TeacherRegisterBO teacherRegisterBO) {
+        Teacher teacher = BeanUtil.copyProperties(teacherRegisterBO, Teacher.class);
+        Date date = new Date();
+        teacher.setPasswd(teacherRegisterBO.getPassword());
+        teacher.setCreateTime(date);
+        teacher.setModifyTime(date);
+        teacherMapper.insertSelective(teacher);
+        return teacher;
+    }
+
     private User register(String mobile, String password, String clientId) {
         // 用户基本信息
         User user = new User();
         user.setUserNo(NOUtil.getUserNo());
         user.setMobile(mobile);
-        user.setMobileSalt(StrUtil.get32UUID());
+        user.setMobileSalt(StrUtil.get32UUID());//冗余字段
         user.setMobilePsw(DigestUtil.sha1Hex(user.getMobileSalt() + password));
         user.setUserSource(clientId);
+        Date date = new Date();
+        user.setGmtCreate(date);
+        user.setGmtModified(date);
         userDao.save(user);
 
         // 用户其他信息
@@ -377,6 +424,8 @@ public class ApiUserInfoBiz extends BaseBiz {
         userExt.setUserNo(user.getUserNo());
         userExt.setUserType(UserTypeEnum.USER.getCode());
         userExt.setMobile(user.getMobile());
+        userExt.setGmtCreate(date);
+        userExt.setGmtModified(date);
         userExtDao.save(userExt);
 
         return user;

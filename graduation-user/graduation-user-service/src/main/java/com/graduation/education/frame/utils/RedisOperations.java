@@ -2,7 +2,6 @@ package com.graduation.education.frame.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.JedisCluster;
 
@@ -77,16 +76,47 @@ public class RedisOperations {
         }
     }
 
-    public void hsetEx(String key,String field , String value , long time, TimeUnit timeUnit){
+    public void hsetEx(String key, String field, String value, long time, TimeUnit timeUnit) {
         try {
             jedisCluster.hset(key, field, value);
             Long ttl = jedisCluster.ttl(key);
-            if(ttl == 0){
+            if (ttl == 0) {
                 //第一次设置过期时间
-                jedisCluster.expire(key , (int) timeUnit.toSeconds(time));
+                jedisCluster.expire(key, (int) timeUnit.toSeconds(time));
             }
         } catch (Exception e) {
             log.warn("redis服务出现异常", e);
         }
+    }
+
+
+    public Long incr(String key) {
+        return incrByIncrement(key, 1);
+    }
+
+    /**
+     * 计数器
+     *
+     * @param key
+     * @param increment
+     * @return
+     */
+    public Long incrByIncrement(String key, int increment) {
+        try {
+            return jedisCluster.incrBy(key, increment);
+        } catch (Exception e) {
+            log.warn("redis服务出现异常", e);
+        }
+        return null;
+    }
+
+    public Long sadd(String key, String... number) {
+        try {
+            jedisCluster.sadd(key, number);
+            return jedisCluster.scard(key);
+        } catch (Exception e) {
+            log.warn("redis服务出现异常", e);
+        }
+        return null;
     }
 }

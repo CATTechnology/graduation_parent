@@ -1,11 +1,16 @@
 package com.graduation.education.user.service.api.biz;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.graduation.education.frame.utils.RedisOperations;
 import com.graduation.education.user.common.RedisKey;
 import com.graduation.education.user.common.req.StudentSignREQ;
 import com.graduation.education.user.common.req.TaskREQ;
+import com.graduation.education.user.common.resq.CategoryRESQ;
+import com.graduation.education.user.common.resq.ContentRESQ;
 import com.graduation.education.user.common.resq.TaskRESQ;
 import com.graduation.education.user.service.dao.impl.mapper.*;
 import com.graduation.education.user.service.dao.impl.mapper.entity.*;
@@ -117,15 +122,23 @@ public class ApiCommonBiz {
     }
 
     public Result<TaskRESQ> getAllTask(TaskREQ taskREQ) {
+        TaskRESQ taskRESQ = new TaskRESQ();
+        getTaskItemById(taskREQ, taskRESQ, true);
+        return Result.success(taskRESQ);
+    }
+
+    private List<TaskItem> getTaskItemById(TaskREQ taskREQ, TaskRESQ taskRESQ, boolean flag) {
         TaskExample example = new TaskExample();
         TaskExample.Criteria criteria = example.createCriteria();
         criteria.andClassNoEqualTo(taskREQ.getClassNo());
         criteria.andCollegeEqualTo(taskREQ.getCollege());
         List<Task> all = taskMapper.selectByExample(example);
+
         List<String> firstTask = Lists.newArrayList();
         Map<Long, String> firstTaskMap = Maps.newHashMap();
         List<Long> secondTaskId = Lists.newArrayList();
-        Map<String, List<String>> map = Maps.newHashMap();
+        Map<String, List<String>> secondTaskMap = Maps.newHashMap();
+
         for (Task task : all) {
             if (task.getParentId() == 0L) {
                 //一级
@@ -143,7 +156,7 @@ public class ApiCommonBiz {
             String firstName = firstTaskMap.get(parentId);
             //二级名称
             String name = task.getName();
-            List<String> tasks = map.get(firstName);
+            List<String> tasks = secondTaskMap.get(firstName);
             if (CollectionUtils.isEmpty(tasks)) {
                 tasks = Lists.newArrayList();
             }
@@ -165,7 +178,7 @@ public class ApiCommonBiz {
                 secondTaskId.add(task.getId());
             }
             tasks.add(name);
-            map.put(firstName, tasks);
+            secondTaskMap.put(firstName, tasks);
         }
 
         //获取taskItem
@@ -174,8 +187,67 @@ public class ApiCommonBiz {
         if (!secondTaskId.isEmpty()) {
             criteria1.andTaskIdIn(secondTaskId);
         }
+        Integer page = taskREQ.getPage();
+        Integer size = taskREQ.getSize();
+        PageHelper.startPage((page - 1) * size, size);
         List<TaskItem> taskItems = taskItemMapper.selectByExample(taskItemExample);
-        TaskRESQ taskRESQ = TaskRESQ.builder().firstTask(firstTask).secondTaskMap(map).taskItemList(taskItems).build();
-        return Result.success(taskRESQ);
+        if (flag) {
+            taskRESQ.setFirstTask(firstTask);
+            taskRESQ.setSecondTaskMap(secondTaskMap);
+            taskRESQ.setTaskItemList(taskItems);
+        }
+        return taskItems;
+    }
+
+    public PageInfo<TaskItem> getPage(TaskREQ taskREQ) {
+        List<TaskItem> taskItemList = getTaskItemById(taskREQ, null, false);
+        return new PageInfo<>(taskItemList);
+    }
+
+    public Result<ContentRESQ> getTaskItemContent(Long id, Long userNo) {
+        String contentKey = RedisKey.buildKey("content:click", id + "");
+        String visitKey = RedisKey.buildKey("content:visit", id + "");
+        //点击量 string
+        Long clickNum = redisOperations.incr(contentKey);
+        //访问人数 set集合 防止重复计算
+        Long visitNum = redisOperations.sadd(visitKey, userNo + "");
+        String content = taskItemMapper.selectById(id);
+        ContentRESQ contentRESQ = ContentRESQ.builder().clickNum(clickNum).visitNum(visitNum).content(content).build();
+        return Result.success(contentRESQ);
+    }
+
+    public CategoryRESQ getAllCategories() {
+        TaskExample example = new TaskExample();
+        TaskExample.Criteria criteria = example.createCriteria();
+        List<Task> all = taskMapper.selectByExample(example);
+
+        List<String> firstTask = Lists.newArrayList();
+        Map<Long, String> firstTaskMap = Maps.newHashMap();
+        Map<String, List<Task>> secondTask = Maps.newHashMap();
+
+        for (Task task : all) {
+            if (task.getParentId() == 0L) {
+                //一级
+                firstTask.add(task.getName());
+                firstTaskMap.put(task.getId(), task.getName());
+            }
+        }
+        for (Task task : all) {
+            Long parentId;
+            if ((parentId = task.getParentId()) == 0L) {
+                //一级
+                continue;
+            }
+            String name = firstTaskMap.get(parentId);
+            List<Task> secondTaskList = secondTask.get(name);
+            if (CollectionUtils.isEmpty(secondTaskList)) {
+                secondTaskList = Lists.newArrayList();
+                secondTask.put(name, secondTaskList);
+            }
+            secondTaskList.add(task);
+        }
+
+        CategoryRESQ categoryRESQ = CategoryRESQ.builder().firstTask(firstTask).secondTask(secondTask).build();
+        return categoryRESQ;
     }
 }

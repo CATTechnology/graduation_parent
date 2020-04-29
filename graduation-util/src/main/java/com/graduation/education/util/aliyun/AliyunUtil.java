@@ -79,7 +79,8 @@ public final class AliyunUtil {
             String filePath = platformEnum.name().toLowerCase() + "/" + StrUtil.get32UUID() + name.substring(name.lastIndexOf("."));
             ObjectMetadata objectMetadata = new ObjectMetadata();
             objectMetadata.setContentType(getcontentType(name));
-            getOssClient(SystemUtil.ALIYUN_OSS_ENDPOINT, aliyun.getAliyunAccessKeyId(), aliyun.getAliyunAccessKeySecret()).putObject(aliyun.getAliyunOssBucket(), filePath, in, objectMetadata);
+            getOssClient(SystemUtil.ALIYUN_OSS_ENDPOINT, aliyun.getAliyunAccessKeyId(),
+                    aliyun.getAliyunAccessKeySecret()).putObject(aliyun.getAliyunOssBucket(), filePath, in, objectMetadata);
             return aliyun.getAliyunOssUrl() + filePath;
         } catch (Exception e) {
             log.error("上传失败", e);

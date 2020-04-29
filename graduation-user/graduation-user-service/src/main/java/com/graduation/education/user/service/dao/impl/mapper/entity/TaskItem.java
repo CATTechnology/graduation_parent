@@ -7,6 +7,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 /**
  * @author 
  * 
@@ -21,21 +24,25 @@ public class TaskItem implements Serializable {
     /**
      * 属于的任务体系
      */
+    @Min(value = 1)
     private Long taskId;
 
     /**
      * 任务标题
      */
+    @NotNull
     private String title;
 
     /**
      * 图片地址
      */
+    @NotNull
     private String image;
 
     /**
      * 任务介绍
      */
+    @NotNull
     private String introduce;
 
     /**
@@ -53,7 +60,11 @@ public class TaskItem implements Serializable {
     /**
      * 详细内容
      */
+    @NotNull
     private String content;
+
+    @NotNull
+    private String contentMd;
 
     private static final long serialVersionUID = 1L;
 }

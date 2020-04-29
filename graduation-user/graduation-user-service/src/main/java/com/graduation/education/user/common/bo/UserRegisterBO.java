@@ -23,44 +23,38 @@ public class UserRegisterBO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
+	 * 学生或者老师或者普通用户
+	 * 1 学生 ， 2 老师， 3 普通用户
+	 */
+	private int type;
+
+	/**
 	 * 手机号码
 	 */
 	@ApiModelProperty(value = "手机", required = true)
-	private String mobile;
-
-	/**
-	 * 学号
-	 */
-	@ApiModelProperty(value = "学号", required = true)
-	private String studentNo;
-
-	/**
-	 *
-	 */
-	@ApiModelProperty(value = "班级", required = true)
-	private String classNo;
+	protected String mobile;
 
 	/**
 	 * 登录密码
 	 */
 	@ApiModelProperty(value = "密码", required = true)
-	private String password;
+	protected String password;
 	/**
 	 * 重复密码
 	 */
 	@ApiModelProperty(value = "重复密码", required = true)
-	private String repassword;
+	protected String repassword;
 	/**
 	 * clientId
 	 */
 	@ApiModelProperty(value = "clientId", required = true)
-	private String clientId;
+	protected String clientId;
 	/**
 	 * 手机验证码
 	 */
-	@ApiModelProperty(value = "手机验证码", required = true)
-	private String code;
+//	@ApiModelProperty(value = "手机验证码", required = true)
+//	protected String code;
 
-	private String ip;
+	protected String ip;
 
 }

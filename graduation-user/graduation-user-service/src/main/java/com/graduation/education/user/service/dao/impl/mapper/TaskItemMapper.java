@@ -11,4 +11,11 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface TaskItemMapper extends MyBatisBaseDao<TaskItem, Long, TaskItemExample> {
+
+    /**
+     * 查询任务内容
+     * @param id
+     * @return
+     */
+    String selectById(Long id);
 }

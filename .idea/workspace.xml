@@ -1,289 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeeb1cfe-a27e-4550-a63c-7b1aa7057d11" name="Default Changelist" comment="第一次提交">
-      <change afterPath="$PROJECT_DIR$/graduation-gateway/target/classes/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-gateway/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-gateway/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-gateway/target/classes/templates/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-gateway-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-gateway-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-gateway.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-system-service-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-system-service-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-system-service.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-user-service-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-user-service-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/config/master/graduation-user-service.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/logback-roncoo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-config/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/logback-roncoo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-server-eureka/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-feign/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-feign/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/api/biz/ApiAdviceBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/dao/impl/mapper/AdviceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/dao/impl/mapper/MyBatisBaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/dao/impl/mapper/entity/Advice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/dao/impl/mapper/entity/AdviceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/resources/mybatis/AdviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/MsgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/MsgTemplateMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/MsgUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/NavBarMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysLogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysMenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysMenuRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysRoleUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/WebsiteLinkMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/WebsiteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/WebsiteNavArticleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/mybatis/WebsiteNavMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignLecturer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignLecturerAudit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignLecturerExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignLecturerProfit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignPlatform.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignRegion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignSendSmsLog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignSys.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignUserExt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignUserLogLogin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/interfaces/IFeignUserLogModified.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/LecturerAuditQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/LecturerExtQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/LecturerProfitQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/LecturerQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/PlatformQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/RegionQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/SendSmsLogQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/SysQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/UserExtEchartsQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/UserExtQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/UserLogLoginQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/UserLogModifiedQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/qo/UserQO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/LecturerAuditVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/LecturerExtVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/LecturerProfitVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/LecturerVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/PlatformVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/RegionVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/SendSmsLogVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/SysVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserEchartsVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserExtMsgVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserExtVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserLogLoginVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserLogModifiedVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/com/graduation/education/user/feign/vo/UserVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/config/GraduationConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/StudentLoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/TeacherLoginDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/req/SignREQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/req/StudentSignREQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/req/TaskREQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/resq/TaskRESQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiCommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiCommonBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/SysDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/SysDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/AdviceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/MyBatisBaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/StudentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/StudentSignMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/SysMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/TaskItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/TaskMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/TeacherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Advice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/AdviceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/StudentExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/StudentSign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/StudentSignExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Sys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/SysExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TaskExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TaskItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TaskItemExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TeacherExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/AdviceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/StudentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/StudentSignMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/SysMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/TaskItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/TaskMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/TeacherMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/src/test/java/com/takefly/redis/JdbcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/ThreadPoolService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/aliyun/Aliyun.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/aliyun/AliyunUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/annotation/AdminLog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/Base.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/BaseBiz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/BaseCached$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/BaseCached.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/BaseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/BaseException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/Bjui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/Page.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/PageUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/base/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/config/ConfigUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/config/SystemUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/AdvTargetEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/AuditStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/CategoryTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/ChannelTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/CourseCategoryEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/CourseTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/DateFormatEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/ExtractStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/FileStorageTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/FileTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/FloorEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/FundDirectionEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/HasNoticeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/HiddenTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsDefaultEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsDocEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsEnableStatisticsEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsFreeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsHfield.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsPayEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsPutawayEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsReadEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsSendEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsShowEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsShowServiceEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsShowUserEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsStudyEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsSuccessEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsTimeSendEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsTopEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/IsVideoEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/LoginStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/MenuTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/MsgTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/NavEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/OperateTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/OrderStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/PayProductTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/PayTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/PlatformEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/PlatformShowEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/ProfitStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/RedisPreEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/ResultEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/SexEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/SourceTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/StatusIdEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/SysTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/TargetEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/TradeStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/TradeTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/UserTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/VideoStatusEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/VideoTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/ZoneLocationEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/enums/recruitTypeEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/pay/MerchantApiUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/pay/PayUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvAuth.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvAuthResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvSign.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvSignResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/PolyvVideo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/Question.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/QuestionResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/UploadFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/polyv/UploadFileResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/ArrayListUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/BeanUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/Constants$Cookie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/Constants$DATE.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/Constants$Session.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/Constants.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/CookieUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/DateUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/EnumUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/HttpUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/IPUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/IdWorker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/ImgUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/JSONUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/JWTUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/MD5Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/NOUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/ObjectMapUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/PDFUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SHA1Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/Sequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SignUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SqlUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/StrUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SystemClock$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SystemClock$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SystemClock$InstanceHolder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/SystemClock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/ThreadLocalUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/VerificationCodeUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/com/graduation/education/util/tools/WebUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/config/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/config/dev/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/config/prod/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/config/test/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/logback-roncoo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/rebel-remote.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/rebel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/classes/system.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/test-classes/com/takefly/redis/JedisClusterTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/test-classes/com/takefly/redis/JedisSentinelTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graduation-util/target/test-classes/com/takefly/redis/RedisDemo1.class" afterDir="false" />
+    <list default="true" id="aeeb1cfe-a27e-4550-a63c-7b1aa7057d11" name="Default Changelist" comment="特性提交">
+      <change afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiAdviceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-server-config/src/main/resources/config/master/graduation-user-service-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-server-config/src/main/resources/config/master/graduation-user-service-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-system/graduation-system-feign/src/main/java/com/graduation/education/system/feign/interfaces/IFeignSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-system/graduation-system-feign/src/main/java/com/graduation/education/system/feign/interfaces/IFeignSys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/api/ApiAdviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/src/main/java/com/graduation/education/system/service/api/ApiAdviceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-feign/src/main/java/com/graduation/education/user/feign/interfaces/IFeignSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/src/main/java/com/graduation/education/user/feign/interfaces/IFeignSys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-course/graduation-course-feign/graduation-course-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-course/graduation-course-feign/graduation-course-feign.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-course/graduation-course-service/graduation-course-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-course/graduation-course-service/graduation-course-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-gateway/graduation-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-gateway/graduation-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-server-config/graduation-server-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-server-config/graduation-server-config.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-server-eureka/graduation-server-eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-server-eureka/graduation-server-eureka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-system/graduation-system-feign/graduation-system-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-system/graduation-system-feign/graduation-system-feign.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-system/graduation-system-service/graduation-system-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-system/graduation-system-service/graduation-system-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-feign/graduation-user-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-feign/graduation-user-feign.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/graduation-user-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/graduation-user-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/intercept/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/intercept/AuthInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/utils/RedisOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/utils/RedisOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/bo/UserLoginPasswordBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/bo/UserLoginPasswordBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/LecturerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/LecturerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/LecturerViewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/LecturerViewDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/RegionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/RegionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/RegionListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/RegionListDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/UserLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/dto/UserLoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/bo/UserRegisterBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/bo/UserRegisterBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/req/TaskREQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/req/TaskREQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/resq/TaskRESQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/common/resq/TaskRESQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiCommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiCommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiRegionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/AuthApiLecturerAuditController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/AuthApiLecturerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/AuthApiLecturerExtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/AuthApiLecturerProfitController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/AuthApiUserExtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/biz/AuthApiLecturerAuditBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/biz/AuthApiLecturerBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/biz/AuthApiLecturerExtBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/biz/AuthApiLecturerProfitBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/auth/biz/AuthApiUserExtBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiCommonBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiCommonBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiUploadBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiUploadBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiUserInfoBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiUserInfoBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiLecturerAuditController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiLecturerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiLecturerProfitController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiPlatformController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiSendSmsLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiUserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiUserExtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/PcApiUserLoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiLecturerAuditBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiLecturerBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiLecturerExtBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiLecturerProfitBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiPlatformBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiSendSmsLogBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiUserBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiUserExtBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/pc/biz/PcApiUserLoginBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/CourseChapterPeriodAuditDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/CourseChapterPeriodDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/CourseVideoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/LecturerAuditDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/LecturerDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/LecturerExtDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/LecturerProfitDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/CourseChapterPeriodAuditDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/CourseChapterPeriodDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/CourseVideoDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/LecturerAuditDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/LecturerDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/LecturerExtDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/LecturerProfitDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseAuditMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseChapterAuditMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseChapterMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseChapterPeriodAuditMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseChapterPeriodMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseIntroduceAuditMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseIntroduceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseRecommendMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseUserStudyLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseUserStudyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/CourseVideoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/LecturerAuditMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/LecturerExtMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/LecturerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/LecturerProfitMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/TaskItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/TaskItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Advice.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Advice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseAuditExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterAuditExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterPeriod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterPeriodAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterPeriodAuditExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseChapterPeriodExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseIntroduce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseIntroduceAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseIntroduceAuditExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseIntroduceExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseRecommend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseRecommendExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseUserStudy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseUserStudyExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseUserStudyLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseUserStudyLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseVideo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/CourseVideoExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Lecturer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerAudit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerAuditExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerExt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerExtExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerProfit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/LecturerProfitExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TaskItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/TaskItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/FeignLecturerAuditController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/FeignLecturerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/FeignLecturerExtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/FeignLecturerProfitController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/biz/FeignLecturerAuditBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/biz/FeignLecturerBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/biz/FeignLecturerExtBiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/feign/biz/FeignLecturerProfitBiz.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graduation-util/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseAuditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseChapterAuditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseChapterMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseChapterPeriodAuditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseChapterPeriodMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseIntroduceAuditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseIntroduceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseRecommendMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseUserStudyLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseUserStudyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/CourseVideoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/LecturerAuditMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/LecturerExtMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/LecturerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/LecturerProfitMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/TaskItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/resources/mybatis/TaskItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/test/java/com/graduation/education/user/service/oss/OssTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-user/graduation-user-service/src/test/java/com/graduation/education/user/service/oss/OssTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-util/graduation-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-util/graduation-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/aliyun/AliyunUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/aliyun/AliyunUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/tools/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/graduation-util/src/main/java/com/graduation/education/util/tools/HttpUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,6 +181,9 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="roncoo-education" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -322,8 +196,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/PlatformDaoImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/graduation-course/graduation-course-service/src/main/java/com/graduation/education/course/service/dao/CourseAuditDao.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/PlatformDaoImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/biz/ApiUserInfoBiz.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JRebelWorkspace">
@@ -369,7 +243,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="@" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/dao/impl/mapper/entity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../后端项目/My-Blog-master" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -383,11 +257,11 @@
       <recent name="C:\Users\DLF\Desktop\毕业设计\roncoo-education\graduation-user\graduation-user-service\src\main\resources\mybatis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.graduation.education.user.service.api.biz" />
+      <recent name="com.graduation.education.user.common.req" />
+      <recent name="com.graduation.education.user.service.api" />
+      <recent name="com.graduation.education.user.common.bo" />
       <recent name="com.graduation.education.user.common.dto" />
-      <recent name="com.graduation.education.user.service.dao.impl.mapper.entity" />
-      <recent name="com.graduation.education.user.service.dao.impl.mapper" />
-      <recent name="com.graduation.education.user.service.dao.impl" />
-      <recent name="com.graduation.education.user.service.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DLF\Desktop\毕业设计\roncoo-education\graduation-user\graduation-user-service\src\main\java\com\graduation\education\user\service\dao\impl\mapper\entity" />
@@ -442,15 +316,66 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 212 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 196 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="HTTP Request.UserServiceApplication#5">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="UserServiceApplication#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserServiceApplication.http" index="5" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="UserServiceApplication#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/UserServiceApplication.http" index="6" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ApiTest.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduation-user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.graduation.education.user.service.course.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.graduation.education.user.service.course" />
+      <option name="MAIN_CLASS_NAME" value="com.graduation.education.user.service.course.ApiTest" />
+      <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.userManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduation-user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.graduation.education.user.service.course.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.graduation.education.user.service.course" />
+      <option name="MAIN_CLASS_NAME" value="com.graduation.education.user.service.course.ApiTest" />
+      <option name="METHOD_NAME" value="userManagerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OssTest.filePathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="graduation-user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.graduation.education.user.service.oss.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.graduation.education.user.service.oss" />
+      <option name="MAIN_CLASS_NAME" value="com.graduation.education.user.service.oss.OssTest" />
+      <option name="METHOD_NAME" value="filePathTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ServerConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="graduation-server-config" />
@@ -487,12 +412,20 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.UserServiceApplication#5" />
+      <item itemvalue="HTTP Request.UserServiceApplication#6" />
+      <item itemvalue="JUnit.OssTest.filePathTest" />
+      <item itemvalue="JUnit.ApiTest.loginTest" />
+      <item itemvalue="JUnit.ApiTest.userManagerTest" />
       <item itemvalue="Spring Boot.ServerConfigApplication" />
       <item itemvalue="Spring Boot.SystemServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.userManagerTest" />
+        <item itemvalue="JUnit.ApiTest.loginTest" />
+        <item itemvalue="JUnit.OssTest.filePathTest" />
+        <item itemvalue="HTTP Request.UserServiceApplication#6" />
         <item itemvalue="HTTP Request.UserServiceApplication#5" />
       </list>
     </recent_temporary>
@@ -555,7 +488,31 @@
       <workItem from="1586074902749" duration="3663000" />
       <workItem from="1586160229027" duration="8770000" />
       <workItem from="1586246739300" duration="17175000" />
-      <workItem from="1586418928113" duration="856000" />
+      <workItem from="1586418928113" duration="13156000" />
+      <workItem from="1586585690259" duration="3625000" />
+      <workItem from="1586614994797" duration="1710000" />
+      <workItem from="1586626415268" duration="606000" />
+      <workItem from="1586673794495" duration="924000" />
+      <workItem from="1586851619610" duration="5217000" />
+      <workItem from="1586856895216" duration="8929000" />
+      <workItem from="1586928596945" duration="3457000" />
+      <workItem from="1586933762279" duration="34000" />
+      <workItem from="1586933944768" duration="3224000" />
+      <workItem from="1586952756726" duration="1643000" />
+      <workItem from="1587015926979" duration="6063000" />
+      <workItem from="1587024787878" duration="11331000" />
+      <workItem from="1587099955826" duration="10328000" />
+      <workItem from="1587185772741" duration="10751000" />
+      <workItem from="1587266215928" duration="16513000" />
+      <workItem from="1587373826635" duration="5235000" />
+      <workItem from="1587459633734" duration="14960000" />
+      <workItem from="1587726411935" duration="599000" />
+      <workItem from="1587788878601" duration="15800000" />
+      <workItem from="1587877672330" duration="11049000" />
+      <workItem from="1587953679975" duration="8627000" />
+      <workItem from="1587984098894" duration="5844000" />
+      <workItem from="1588048177233" duration="16230000" />
+      <workItem from="1588131716408" duration="5284000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1585729146077</created>
@@ -571,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585731816506</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="特性提交">
+      <created>1586420936967</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586420936967</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +556,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+    <MESSAGE value="特性提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="特性提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="0" key="#Notifications" timestamp="1584245887735">
@@ -607,10 +572,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="257" y="0" key="#TODO/0.0.1536.824@0.0.1536.824" timestamp="1585731840126" />
-    <state x="127" y="89" width="1382" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586009594395">
+    <state x="127" y="89" width="1382" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587877804940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="127" y="89" width="1382" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586009594395" />
+    <state x="127" y="89" width="1382" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587877804940" />
     <state x="530" y="22" key="#com.intellij.ide.util.MemberChooser" timestamp="1585648305491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -627,110 +592,126 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="307" y="250" width="922" height="336" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1585987759588" />
-    <state x="41" y="0" key="CommitChangelistDialog2" timestamp="1586420931842">
+    <state x="436" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587460046510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="41" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586420931842" />
-    <state x="498" y="112" key="FileChooserDialogImpl" timestamp="1585732640656">
+    <state x="436" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587460046510" />
+    <state x="647" y="332" key="#debugger.expression.dialog" timestamp="1588049469163">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="112" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585732640656" />
-    <state width="1484" height="425" key="GridCell.Tab.0.bottom" timestamp="1586420847883">
+    <state x="647" y="332" key="#debugger.expression.dialog/0.0.1536.824@0.0.1536.824" timestamp="1588049469163" />
+    <state x="56" y="0" key="CommitChangelistDialog2" timestamp="1588165655031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="425" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586420847883" />
-    <state width="1484" height="425" key="GridCell.Tab.0.center" timestamp="1586420847883">
+    <state x="56" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588165655031" />
+    <state width="635" height="582" key="DebuggerActiveHint" timestamp="1587017178068">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="425" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586420847883" />
-    <state width="1484" height="425" key="GridCell.Tab.0.left" timestamp="1586420847883">
+    <state width="635" height="582" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1587017178068" />
+    <state x="498" y="112" key="FileChooserDialogImpl" timestamp="1587108302646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="425" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586420847883" />
-    <state width="1484" height="425" key="GridCell.Tab.0.right" timestamp="1586420847883">
+    <state x="498" y="112" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587108302646" />
+    <state x="560" y="287" width="445" height="249" key="Github.CreateGistDialog" timestamp="1587616462096">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="425" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586420847883" />
-    <state width="1484" height="478" key="GridCell.Tab.1.bottom" timestamp="1586369401052">
+    <state x="560" y="287" width="445" height="249" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1587616462096" />
+    <state width="1484" height="518" key="GridCell.Tab.0.bottom" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.1.center" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.0.center" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.1.left" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.0.left" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.1.right" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.0.right" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.2.bottom" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.1.bottom" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.2.center" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.1.center" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.2.left" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.1.left" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state width="1484" height="478" key="GridCell.Tab.2.right" timestamp="1586369401052">
+    <state width="1484" height="518" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.1.right" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1484" height="478" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586369401052" />
-    <state x="249" y="88" key="IDE.errors.dialog" timestamp="1586368142521">
+    <state width="1484" height="518" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.2.bottom" timestamp="1588165818658">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="88" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1586368142521" />
+    <state width="1484" height="518" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.2.center" timestamp="1588165818658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1484" height="518" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.2.left" timestamp="1588165818658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1484" height="518" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state width="1484" height="518" key="GridCell.Tab.2.right" timestamp="1588165818658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1484" height="518" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1588165818658" />
+    <state x="249" y="88" key="IDE.errors.dialog" timestamp="1587885207336">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="88" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587885207336" />
     <state x="198" y="0" key="SettingsEditor" timestamp="1585998000017">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="198" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585998000017" />
-    <state x="423" y="91" width="675" height="655" key="StructurePopup" timestamp="1585379927334">
+    <state x="423" y="91" width="762" height="655" key="StructurePopup" timestamp="1587976766687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="423" y="91" width="675" height="655" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1585379927334" />
-    <state x="261" y="82" key="Vcs.Push.Dialog.v2" timestamp="1585731403187">
+    <state x="423" y="91" width="762" height="655" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1587976766687" />
+    <state x="261" y="82" key="Vcs.Push.Dialog.v2" timestamp="1588165618446">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="82" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585731403187" />
-    <state x="378" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1586420517155">
+    <state x="261" y="82" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588165618446" />
+    <state x="378" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1588131950720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="378" y="197" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586420517155" />
+    <state x="378" y="197" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588131950720" />
     <state width="711" height="392" key="documentation.popup.size" timestamp="1585982331747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="711" height="392" key="documentation.popup.size/0.0.1536.824@0.0.1536.824" timestamp="1585982331747" />
-    <state x="330" y="87" width="1206" height="650" key="find.popup" timestamp="1585990944565">
+    <state x="330" y="87" width="1206" height="650" key="find.popup" timestamp="1587877843320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="330" y="87" width="1206" height="650" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1585990944565" />
+    <state x="330" y="87" width="1206" height="650" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1587877843320" />
     <state x="403" y="161" key="git4idea.merge.GitPullDialog" timestamp="1585731128428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="403" y="161" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1585731128428" />
-    <state x="500" y="289" key="git4idea.ui.GitResetDialog" timestamp="1585728784769">
+    <state x="500" y="289" key="git4idea.ui.GitResetDialog" timestamp="1588165530981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="500" y="289" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1585728784769" />
+    <state x="500" y="289" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1588165530981" />
     <state x="451" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1585737139018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="451" y="0" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1585737139018" />
-    <state x="341" y="183" key="run.anything.popup" timestamp="1585981411829">
+    <state x="341" y="183" key="run.anything.popup" timestamp="1587795673119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="341" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1585981411829" />
-    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1586177794796">
+    <state x="341" y="183" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587795673119" />
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1587976568657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586177794796" />
+    <state x="341" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587976568657" />
     <state x="561" y="156" key="svn.repositoryBrowser" timestamp="1585730874922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -744,19 +725,44 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUploadController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/test/java/com/graduation/education/user/service/oss/OssTest.java</url>
-          <line>42</line>
+          <line>44</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/frame/intercept/AuthInterceptor.java</url>
-          <line>92</line>
+          <line>85</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUserInfoController.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUserInfoController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiUploadController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiAdviceController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiAdviceController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/graduation-user/graduation-user-service/src/main/java/com/graduation/education/user/service/api/ApiStudentController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
